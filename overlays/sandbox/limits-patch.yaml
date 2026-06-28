@@ -4,7 +4,7 @@ metadata:
   name: ai-engine
   namespace: ai-engine
 spec:
-  replicas: 1
+  replicas: 2
   template:
     spec:
       containers:
