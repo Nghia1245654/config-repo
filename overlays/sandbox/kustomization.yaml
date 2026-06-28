@@ -6,3 +6,7 @@ resources:
 
 patches:
   - path: limits-patch.yaml
+
+images:
+  - name: 022267198114.dkr.ecr.us-east-1.amazonaws.com/tf1/correlator-worker
+    newTag: "cea65ca"

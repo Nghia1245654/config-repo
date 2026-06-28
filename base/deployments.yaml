@@ -18,7 +18,8 @@ spec:
       serviceAccountName: ai-engine
       containers:
         - name: ai-engine
-          image: 022267198114.dkr.ecr.us-east-1.amazonaws.com/tf1/ai-engine:latest
+          image: python:3.12-alpine
+          command: ["python", "-m", "http.server", "8080"]
           ports:
             - containerPort: 8080
           resources:
