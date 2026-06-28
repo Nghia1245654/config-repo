@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-engine
+  namespace: ai-engine
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: ai-engine
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: correlator-worker
+  namespace: tf1-aiops
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: correlator-worker
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi
